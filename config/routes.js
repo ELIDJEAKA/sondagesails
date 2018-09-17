@@ -11,6 +11,10 @@
 module.exports.routes = {
 
 
+  'post /user/register': 'UserController.signup',
+  'post /user/login': 'UserController.signin',
+  'get /user/findorcreate': 'UserController.createUser',
+  'get /user/:username': 'UserController.findByUsername',
   //  ╦ ╦╔═╗╔╗ ╔═╗╔═╗╔═╗╔═╗╔═╗
   //  ║║║║╣ ╠╩╗╠═╝╠═╣║ ╦║╣ ╚═╗
   //  ╚╩╝╚═╝╚═╝╩  ╩ ╩╚═╝╚═╝╚═╝

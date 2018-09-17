@@ -8,22 +8,34 @@
 module.exports = {
 
   attributes: {
-
-    //  ╔═╗╦═╗╦╔╦╗╦╔╦╗╦╦  ╦╔═╗╔═╗
-    //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
-    //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
-
-
-    //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
-    //  ║╣ ║║║╠╩╗║╣  ║║╚═╗
-    //  ╚═╝╩ ╩╚═╝╚═╝═╩╝╚═╝
-
-
-    //  ╔═╗╔═╗╔═╗╔═╗╔═╗╦╔═╗╔╦╗╦╔═╗╔╗╔╔═╗
-    //  ╠═╣╚═╗╚═╗║ ║║  ║╠═╣ ║ ║║ ║║║║╚═╗
-    //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
-
-  },
+    name: {
+      type: 'string',
+      required: true
+    },
+    email: {
+      type: 'string',
+      required: true,
+      unique: true
+    },
+    identite: {
+      type: 'string',
+      enum: ['agent', 'admin','developpeur'],
+      defaultsTo: 'agent'
+    },
+    username: {
+      type: 'string',
+      required: true,
+      unique: true
+    },
+    password: {
+      type: 'string',
+      required: true
+    },
+    avatar: {
+      type: 'string',
+      defaultsTo: 'default_avatar.png'
+    }
+  }
 
 };
 
