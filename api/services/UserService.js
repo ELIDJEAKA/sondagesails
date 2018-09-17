@@ -1,4 +1,4 @@
-let md5 = require('MD5');
+let md5 = require('md5');
 module.exports = {
     uploadFile: function (req, res) {
         req.file('avatar').upload({
