@@ -19,7 +19,7 @@ module.exports = {
     },
     identite: {
       type: 'string',
-      enum: ['agent', 'admin','developpeur'],
+      isIn: ['agent', 'admin','developpeur'],
       defaultsTo: 'agent'
     },
     username: {
