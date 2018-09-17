@@ -49,7 +49,7 @@ module.exports.datastores = {
     *                                                                          *
     ***************************************************************************/
     adapter: 'sails-mysql',
-    url: 'mysql://root@localhost:3306/ita_se',
+    url: 'mysql://bemadic@54.37.225.185:3306/evoting',
     // adapter: 'sails-mysql',
     // host: 'localhost',
     // port: 3306,
