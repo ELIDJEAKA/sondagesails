@@ -4,7 +4,7 @@
  * @description :: Server-side logic for managing users
  * @help        :: See http://sailsjs.org/#!/documentation/concepts/Controllers
  */
-let md5 = require('MD5');
+let md5 = require('md5');
 module.exports = {
     /**
      * Return set Table in occupied state
