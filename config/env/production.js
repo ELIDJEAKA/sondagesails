@@ -252,7 +252,7 @@ module.exports = {
     ***************************************************************************/
     onlyAllowOrigins: [
       'https://sondagesails.herokuapp.com',
-      //'https://staging.example.com',
+      // 'https://staging.example.com',
     ],
 
 
