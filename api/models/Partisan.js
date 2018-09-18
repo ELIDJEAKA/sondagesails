@@ -66,7 +66,7 @@ module.exports = {
         console.log(err)
         return;
       }
-      console.log('Updated all users named "Walter Jr" to have name ' + updated[0].name);
+      console.log(Zone);
     });
     return CreatedRecord
 
