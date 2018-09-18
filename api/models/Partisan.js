@@ -61,12 +61,21 @@ module.exports = {
     }
   },
   afterCreate:function(CreatedRecord, proceed){
-    console.log("===============nouveau partisan===============")
-    console.log(CreatedRecord)
-    console.log("===============nouveau partisan===============")
-    Zone.update({ name: CreatedRecord.zone })
-      .set({ nb_partisans: nb_partisans + 1 });
-    sails.log('Nouveau partisan enregistre');
-    return res.ok();
+    Zone.update({ id: CreatedRecord.zone }, { nb_partisans: nb_partisans + 1 }).exec(function afterwards(err, updated) {
+      if (err) {
+        console.log(err)
+        return;
+      }
+      console.log('Updated all users named "Walter Jr" to have name ' + updated[0].name);
+    });
+    return CreatedRecord
+
+    // console.log("===============nouveau partisan===============")
+    // console.log(CreatedRecord)
+    // console.log("===============nouveau partisan===============")
+    // Zone.update({ name: CreatedRecord.zone })
+    //   .set({ nb_partisans: nb_partisans + 1 });
+    // sails.log('Nouveau partisan enregistre');
+    // return res.ok();
   }
 };
