@@ -14,7 +14,7 @@ module.exports = {
     },
     datenaiss: { 
       type: 'ref',
-      columnType: 'datetime'
+      columnType: 'date'
     },
     sexe: {
       type: 'string',
