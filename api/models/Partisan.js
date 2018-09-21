@@ -19,7 +19,6 @@ module.exports = {
     sexe: {
       type: 'string',
       isIn: ['M', 'F'],
-      defaultsTo: 'M',
       required: true
     },
     profession: {
