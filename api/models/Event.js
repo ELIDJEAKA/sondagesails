@@ -36,6 +36,18 @@ module.exports = {
       model: 'zone'
     }
   },
+  afterCreate: async function (newlyCreatedRecord, proceed) {
+    var finn = await Zone.findOne({
+      id: newlyCreatedRecord.zone
+    });
 
+    if (!finn) {
+      return res.notFound('Could not find Finn, sorry.');
+    }
+
+    await Zone.update({ id: newlyCreatedRecord.zone })
+      .set({ event: parseInt(finn.event + 1) });
+    return proceed();
+  }
 };
 

@@ -7,6 +7,9 @@
 
 module.exports = {
   
-
+    sondage_zone:async function(req,res){
+        var Zones = await Zone.find({})        
+        return res.json(Zones)
+    }
 };
 

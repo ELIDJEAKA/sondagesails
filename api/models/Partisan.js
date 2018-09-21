@@ -60,22 +60,17 @@ module.exports = {
       model: 'zone'
     }
   },
-  afterCreate:function(CreatedRecord, proceed){
-    Zone.update({ id: CreatedRecord.zone }, { nb_partisans: nb_partisans + 1 }).exec(function afterwards(err, updated) {
-      if (err) {
-        console.log(err)
-        return;
-      }
-      console.log(Zone);
+  afterCreate: async function (newlyCreatedRecord, proceed) {
+    var finn = await Zone.findOne({
+      id: newlyCreatedRecord.zone
     });
-    return CreatedRecord
 
-    // console.log("===============nouveau partisan===============")
-    // console.log(CreatedRecord)
-    // console.log("===============nouveau partisan===============")
-    // Zone.update({ name: CreatedRecord.zone })
-    //   .set({ nb_partisans: nb_partisans + 1 });
-    // sails.log('Nouveau partisan enregistre');
-    // return res.ok();
+    if (!finn) {
+      return res.notFound('Could not find Finn, sorry.');
+    }
+
+    await Zone.update({ id: newlyCreatedRecord.zone })
+      .set({ nb_partisans: parseInt(finn.nb_partisans+1) });
+    return proceed();
   }
 };

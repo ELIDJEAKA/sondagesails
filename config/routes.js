@@ -15,6 +15,7 @@ module.exports.routes = {
   'post /user/login': 'UserController.signin',
   'get /user/findorcreate': 'UserController.createUser',
   'get /user/:username': 'UserController.findByUsername',
+  'get /zone/sondage_zone': 'ZoneController.sondage_zone',
   //  ╦ ╦╔═╗╔╗ ╔═╗╔═╗╔═╗╔═╗╔═╗
   //  ║║║║╣ ╠╩╗╠═╝╠═╣║ ╦║╣ ╚═╗
   //  ╚╩╝╚═╝╚═╝╩  ╩ ╩╚═╝╚═╝╚═╝
