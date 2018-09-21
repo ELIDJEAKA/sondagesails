@@ -32,23 +32,19 @@ module.exports = {
       type: 'string'
     },
     email: {
-      type: 'string',
-      required: true
+      type: 'string'
     },
     cni: {
       type: 'string'
     },
     carte_electeur: {
-      type: 'boolean',
-      required: true
+      type: 'boolean'
     },
     num_carte_electeur: {
-      type: 'string',
-      required: true
+      type: 'string'
     },
     lieu_vote: {
-      type: 'string',
-      required: true
+      type: 'string'
     },
     avatar: {
       type: 'string',
