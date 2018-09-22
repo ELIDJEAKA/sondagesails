@@ -54,7 +54,8 @@ module.exports = {
       type: 'string'// membre simple, partisans, simpartisan, benevole
     },
     zone: {
-      model: 'zone'
+      model: 'zone',
+      required: true
     }
   },
   afterCreate: async function (newlyCreatedRecord, proceed) {
