@@ -17,18 +17,15 @@ module.exports = {
       type: 'string'
     },
     image: {
-      type: 'string',
-      required: true
+      type: 'string'
     },
     logo: {
       type: 'string'
     },
-    espace_vote: {
-      type: 'boolean',
-      required: true
-    }
-
+    simulateurs: {
+      collection: 'simulateur',
+      via: 'candidat'
+    },
   },
-
 };
 

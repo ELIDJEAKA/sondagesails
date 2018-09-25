@@ -12,6 +12,11 @@ module.exports = {
       type: 'string',
       required: true
     },
+    code:{
+      type: 'string',
+      isIn: ["1", "2", "3","4"],
+      defaultsTo: '1'
+    },
     nombre: {
       type: 'number'
     }

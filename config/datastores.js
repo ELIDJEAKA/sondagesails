@@ -57,8 +57,5 @@ module.exports.datastores = {
     // user: 'root',
     // password: '',
     // database:'ita_se'
-
   },
-
-
 };
