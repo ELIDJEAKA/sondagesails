@@ -41,7 +41,7 @@ module.exports = {
                 }
                 else { // simulateur du candidat exite ==> passe à la modification du nombre
                     await Erreur.update({ code: req.body.code })
-                        .set({ nombre: parseInt(simulateur.nombre + 1) });
+                        .set({ nombre: parseInt(erreur.nombre + 1) });
                 }
             });
         return res.json({
