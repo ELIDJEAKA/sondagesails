@@ -26,7 +26,7 @@ module.exports = {
                             sails.log('Created a new user: ' + sondage);
                         }
                         else { // sondage du candidat exite ==> passe à la modification du nombre
-                            await Simulateur.update({ code: element.code })
+                            await Sondage.update({ code: element.code })
                                 .set({ nombre: parseInt(sondage.nombre + 1) });
                         }
                     });
