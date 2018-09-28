@@ -12,11 +12,12 @@ module.exports.routes = {
 
 
   'post /user/register': 'UserController.signup',
-  'simuulateur /user/login': 'UserController.signin',
+  'post /user/login': 'UserController.signin',
   'get /user/findorcreate': 'UserController.createUser',
   'get /user/:username': 'UserController.findByUsername',
   'get /zone/sondage_zone': 'ZoneController.sondage_zone',
   'post /simulateur/add': 'SimulateurController.addSimulateur',
+  'post /sondage/add':'SondageController.addSondage',
   //  ╦ ╦╔═╗╔╗ ╔═╗╔═╗╔═╗╔═╗╔═╗
   //  ║║║║╣ ╠╩╗╠═╝╠═╣║ ╦║╣ ╚═╗
   //  ╚╩╝╚═╝╚═╝╩  ╩ ╩╚═╝╚═╝╚═╝

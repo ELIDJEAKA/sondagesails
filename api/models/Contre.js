@@ -8,9 +8,17 @@
 module.exports = {
 
   attributes: {
-      description:{
-        type:"string"
-      }
+    code: {
+      type: 'number',
+      required: true
+    },
+    name: {
+      type: 'string',
+      required: true
+    },
+    nombre: {
+      type: 'number'
+    }
   },
 
 };
